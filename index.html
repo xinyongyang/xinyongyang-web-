@@ -1503,8 +1503,8 @@
             
             <div class="about-grid">
                 <div class="about-image">
-                    <!-- 修改：使用COS链接，并添加手机端优化参数 -->
-                    <img src="https://xinyongyang-1407545069.cos.ap-shanghai.myqcloud.com/factory.jpg?imageMogr2/thumbnail/800x/format/webp/quality/85" alt="工厂" id="about-img" onerror="this.src='https://xinyongyang-1407545069.cos.ap-shanghai.myqcloud.com/factory.jpg'">
+                    <!-- 修改：添加 ?v=3 强制刷新缓存 -->
+                    <img src="https://xinyongyang-1407545069.cos.ap-shanghai.myqcloud.com/factory.jpg?v=3" alt="工厂" id="about-img" onerror="this.src='https://xinyongyang-1407545069.cos.ap-shanghai.myqcloud.com/factory.jpg?v=3'">
                     <div class="about-badge">
                         <strong>ISO</strong>
                         <span data-i18n="about.cert">9001认证</span>
@@ -1848,8 +1848,8 @@
                         <div class="settings-form">
                             <div class="form-group">
                                 <label>工厂图片路径</label>
-                                <!-- 修改：默认使用COS链接 -->
-                                <input type="text" id="setting-about-image" value="https://xinyongyang-1407545069.cos.ap-shanghai.myqcloud.com/factory.jpg" placeholder="如：images/factory.jpg" oninput="updateImagePreview('setting-about-image', 'preview-about-image')">
+                                <!-- 修改：默认使用COS链接，并加版本号 -->
+                                <input type="text" id="setting-about-image" value="https://xinyongyang-1407545069.cos.ap-shanghai.myqcloud.com/factory.jpg?v=3" placeholder="如：images/factory.jpg" oninput="updateImagePreview('setting-about-image', 'preview-about-image')">
                                 <span class="helper-text">建议尺寸：800x600像素，支持本地路径或完整URL</span>
                                 <img id="preview-about-image" class="image-preview" alt="预览">
                             </div>
@@ -1939,7 +1939,7 @@
         // COS 基础URL
         const COS_BASE_URL = 'https://xinyongyang-1407545069.cos.ap-shanghai.myqcloud.com';
         
-        // 默认数据 - 已修改为COS链接
+        // 默认数据 - 已修改为COS链接，全部加上 ?v=3 强制刷新缓存
         const DEFAULT_DATA = {
             company: {
                 name: '江苏新永杨环保建材有限公司',
@@ -1960,8 +1960,8 @@
                 }
             },
             about: {
-                // 修改：使用COS链接
-                image: COS_BASE_URL + '/factory.jpg',
+                // 修改：使用COS链接，并加版本号 ?v=3
+                image: COS_BASE_URL + '/factory.jpg?v=3',
                 description: {
                     zh: '位于江苏省张家港市，是一家专业从事电力工业固废资源化利用综合化处置的企业。公司业务主要包括电力企业脱硫石膏及粉煤灰综合利用处置，产品覆盖应用于水泥生产、商砼产品、工业防水、防火涂料及农业土壤添加及改良等多个领域',
                     en: 'Located in Zhangjiagang City, Jiangsu Province, the company specializes in the comprehensive resource utilization and integrated treatment of solid waste from the power industry. Its main business covers the comprehensive utilization and disposal of flue gas desulfurization (FGD) gypsum and fly ash from power generation enterprises. The products are widely applied in cement production, ready-mixed concrete products, industrial waterproofing, fireproof coatings, and agricultural soil amendment and improvement, among various other fields.',
@@ -1984,8 +1984,8 @@
                         ja: '高純度脱硫石膏パウダー。建築用石膏、セメント遅延剤など多目的に使用可能。純度≥90%、細度200メッシュ以上。',
                         ko: '고순도 탈황 석고 분말로, 건설용 석고 및 시멘트 지연제 등 다양한 용도에 적합합니다. 순도≥90%, 세분도 200메쉬 이상.'
                     },
-                    // 修改：使用COS链接
-                    image: COS_BASE_URL + '/product-gypsum-powder.jpg'
+                    // 修改：使用COS链接，并加版本号 ?v=3
+                    image: COS_BASE_URL + '/product-gypsum-powder.jpg?v=3'
                 },
                 {
                     id: 2,
@@ -2001,8 +2001,8 @@
                         ja: '高品質脱硫石膏ブロック。土壌改良、工業原料などの分野で使用可能。規格が揃っており、品質が安定しています。',
                         ko: '고품질 탈황 석고 블록으로, 토양 개량 및 산업용 원료 등의 분야에서 사용할 수 있습니다. 규격이 다양하고 품질이 안정적입니다.'
                     },
-                    // 修改：使用COS链接
-                    image: COS_BASE_URL + '/product-gypsum-block.jpg'
+                    // 修改：使用COS链接，并加版本号 ?v=3
+                    image: COS_BASE_URL + '/product-gypsum-block.jpg?v=3'
                 },
                 {
                     id: 3,
@@ -2018,8 +2018,8 @@
                         ja: '高品質フライアッシュ。コンクリート添加剤、セメント混合材などに適しています。活性が高く、品質が優れています。',
                         ko: '고품질 플라이애시로, 콘크리트 첨가제 및 시멘트 혼합재 등에 적합합니다. 활성이 높고 품질이 우수합니다.'
                     },
-                    // 修改：使用COS链接
-                    image: COS_BASE_URL + '/product-fly-ash.jpg'
+                    // 修改：使用COS链接，并加版本号 ?v=3
+                    image: COS_BASE_URL + '/product-fly-ash.jpg?v=3'
                 },
                 {
                     id: 4,
@@ -2035,8 +2035,8 @@
                         ja: '各種石膏基材の建築材料。環境に優しく省エネで、性能に優れています。石膏ボード、石膏モールディングなどが含まれます。',
                         ko: '다양한 석고 기반 건축 자재로, 친환경적이고 에너지 절약이며 성능이 우수합니다. 석고 보드, 석고 몰딩 등이 포함됩니다.'
                     },
-                    // 修改：使用COS链接
-                    image: COS_BASE_URL + '/product-gypsum-materials.jpg'
+                    // 修改：使用COS链接，并加版本号 ?v=3
+                    image: COS_BASE_URL + '/product-gypsum-materials.jpg?v=3'
                 }
             ],
             certificates: [
@@ -2054,9 +2054,9 @@
                         ja: '国家権威ある検査機関の認証を取得し、製品品質は国家基準に準拠しています',
                         ko: '국가 권위 있는 검사 기관의 인증을 받았으며, 제품 품질이 국가 표준을 충족합니다'
                     },
-                    // 修改：使用COS链接
-                    image: COS_BASE_URL + '/certificate-quality.jpg',
-                    fullImage: COS_BASE_URL + '/certificate-quality.jpg',
+                    // 修改：使用COS链接，并加版本号 ?v=3
+                    image: COS_BASE_URL + '/certificate-quality.jpg?v=3',
+                    fullImage: COS_BASE_URL + '/certificate-quality.jpg?v=3',
                     issuer: '国家质量监督检验中心',
                     date: '2024-01-15'
                 },
@@ -2074,9 +2074,9 @@
                         ja: '環境基準に準拠し、グリーンで持続可能です',
                         ko: '환경 표준을 준수하며, 친환경적이고 지속 가능합니다'
                     },
-                    // 修改：使用COS链接
-                    image: COS_BASE_URL + '/certificate-env.jpg',
-                    fullImage: COS_BASE_URL + '/certificate-env.jpg',
+                    // 修改：使用COS链接，并加版本号 ?v=3
+                    image: COS_BASE_URL + '/certificate-env.jpg?v=3',
+                    fullImage: COS_BASE_URL + '/certificate-env.jpg?v=3',
                     issuer: '环境保护部认证中心',
                     date: '2024-02-20'
                 },
@@ -2094,9 +2094,9 @@
                         ja: '国家製品品質基準を満たし、ISO 9001品質管理システムの認証を取得しています',
                         ko: '국가 제품 품질 표준을 충족하며, ISO 9001 품질 관리 시스템 인증을 받았습니다'
                     },
-                    // 修改：使用COS链接
-                    image: COS_BASE_URL + '/certificate-iso.jpg',
-                    fullImage: COS_BASE_URL + '/certificate-iso.jpg',
+                    // 修改：使用COS链接，并加版本号 ?v=3
+                    image: COS_BASE_URL + '/certificate-iso.jpg?v=3',
+                    fullImage: COS_BASE_URL + '/certificate-iso.jpg?v=3',
                     issuer: 'ISO国际标准化组织',
                     date: '2024-03-10'
                 }
@@ -2732,7 +2732,7 @@
             if (aboutImg) {
                 aboutImg.src = siteData.about.image || DEFAULT_DATA.about.image;
                 aboutImg.onerror = function() {
-                    this.src = COS_BASE_URL + '/factory.jpg';
+                    this.src = COS_BASE_URL + '/factory.jpg?v=3';
                 };
             }
             
@@ -2768,12 +2768,12 @@
                     desc = p.description;
                 }
                 
-                const image = p.image || COS_BASE_URL + '/product-gypsum-powder.jpg';
-                // 修改：备用链接也使用COS
-                const fallbackImage = COS_BASE_URL + '/product-gypsum-powder.jpg';
+                const image = p.image || COS_BASE_URL + '/product-gypsum-powder.jpg?v=3';
+                // 修改：备用链接也使用COS，并加版本号
+                const fallbackImage = COS_BASE_URL + '/product-gypsum-powder.jpg?v=3';
                 
-                // 添加图片处理参数（手机端优化）
-                const optimizedImage = image + '?imageMogr2/thumbnail/800x/format/webp/quality/85';
+                // 添加图片处理参数（手机端优化），并加上版本号
+                const optimizedImage = image.includes('?') ? image : image + '?v=3';
                 
                 return `
                     <div class="product-card">
@@ -2811,8 +2811,11 @@
                     desc = c.description;
                 }
                 
-                const image = c.image || COS_BASE_URL + '/certificate-quality.jpg';
-                const fallbackImage = COS_BASE_URL + '/certificate-quality.jpg';
+                const image = c.image || COS_BASE_URL + '/certificate-quality.jpg?v=3';
+                const fallbackImage = COS_BASE_URL + '/certificate-quality.jpg?v=3';
+                
+                // 确保图片链接包含版本号
+                const imageWithVersion = image.includes('?') ? image : image + '?v=3';
                 
                 return `
                     <div class="cert-card" onclick="openLightbox(${i})">
@@ -2825,7 +2828,7 @@
                             <div class="cert-zoom">🔍</div>
                         </div>
                         <div class="cert-image" style="position: relative;">
-                            <img src="${image}" alt="${name}" onerror="this.src='${fallbackImage}'">
+                            <img src="${imageWithVersion}" alt="${name}" onerror="this.src='${fallbackImage}'">
                             <div class="cert-overlay"><span>${lang === 'zh' ? '点击查看大图' : (lang === 'en' ? 'Click to view' : (lang === 'ja' ? 'クリックして拡大' : '클릭하여 확대'))}</span></div>
                         </div>
                         <div class="cert-footer">
@@ -2928,11 +2931,13 @@
                 desc = cert.description;
             }
             
-            const image = cert.fullImage || cert.image || COS_BASE_URL + '/certificate-quality.jpg';
+            const image = cert.fullImage || cert.image || COS_BASE_URL + '/certificate-quality.jpg?v=3';
+            // 确保大图也带版本号
+            const imageWithVersion = image.includes('?') ? image : image + '?v=3';
             
             document.getElementById('lightbox-title').textContent = name;
             document.getElementById('lightbox-desc').textContent = desc;
-            document.getElementById('lightbox-img').src = image;
+            document.getElementById('lightbox-img').src = imageWithVersion;
             
             document.getElementById('lightbox').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -3058,7 +3063,7 @@
                         <div class="form-group">
                             <label>图片路径</label>
                             <input type="text" id="product-img-${i}" value="${p.image || ''}" placeholder="如：images/product.jpg" oninput="updateImagePreview('product-img-${i}', 'preview-product-${i}')">
-                            <span class="helper-text">支持本地相对路径（如 images/product.jpg）或完整URL</span>
+                            <span class="helper-text">支持本地相对路径（如 images/product.jpg）或完整URL。如使用COS链接，建议加上 ?v=3 防止缓存</span>
                             <img id="preview-product-${i}" class="image-preview" alt="产品预览">
                         </div>
                         <div class="form-group"><label>🇨🇳 中文描述</label><textarea id="product-desc-zh-${i}" rows="2">${desc.zh || ''}</textarea></div>
@@ -3100,7 +3105,7 @@
                         <div class="form-group">
                             <label>预览图路径</label>
                             <input type="text" id="cert-img-${i}" value="${c.image || ''}" placeholder="如：images/certificate.jpg" oninput="updateImagePreview('cert-img-${i}', 'preview-cert-${i}')">
-                            <span class="helper-text">支持本地相对路径或完整URL</span>
+                            <span class="helper-text">支持本地相对路径或完整URL。建议加上 ?v=3 防止缓存</span>
                             <img id="preview-cert-${i}" class="image-preview" alt="证书预览">
                         </div>
                         <div class="form-group"><label>大图路径</label><input type="text" id="cert-fullimg-${i}" value="${c.fullImage || c.image || ''}"></div>
@@ -3297,4 +3302,4 @@
     </script>
 </body>
 </html>
-<!-- 版本2 -->
+<!-- 版本3 - 已添加防缓存参数 -->
